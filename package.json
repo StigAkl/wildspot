@@ -1,0 +1,37 @@
+{
+  "name": "wildspot",
+  "version": "0.1.0",
+  "description": "Logg steder du har vært og samle gode teltplasser på et 3D-kart",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c green,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node --env-file-if-exists=.env --watch server/index.js",
+    "dev:web": "vite",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "lint": "biome check",
+    "format": "biome check --write",
+    "tunnel": "node scripts/tunnel.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "maplibre-gl": "^6.11.2",
+    "multer": "^2.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@vitejs/plugin-react": "^6.1.1",
+    "cloudflared": "0.7.3",
+    "concurrently": "^10.0.5",
+    "qrcode": "1.5.4",
+    "vite": "^8.3.2"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  }
+}

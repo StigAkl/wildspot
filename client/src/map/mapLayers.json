@@ -1,0 +1,1415 @@
+[
+  {
+    "id": "osm-standard",
+    "name": "OpenStreetMap Standard",
+    "provider": "openstreetmap",
+    "category": "Street",
+    "description": "Community-maintained street map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "&copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "osm-hot",
+    "name": "OpenStreetMap HOT",
+    "provider": "openstreetmap",
+    "category": "Street",
+    "description": "Humanitarian OpenStreetMap Team style.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "&copy; OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team"
+    }
+  },
+  {
+    "id": "osm-de",
+    "name": "OpenStreetMap DE",
+    "provider": "openstreetmap",
+    "category": "Regional",
+    "description": "German OpenStreetMap tile style.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tile.openstreetmap.de/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "&copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "osm-ch",
+    "name": "OpenStreetMap CH",
+    "provider": "openstreetmap",
+    "category": "Regional",
+    "description": "Swiss OpenStreetMap tile style.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tile.osm.ch/switzerland/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "&copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "google-maps",
+    "name": "Google Maps",
+    "provider": "google",
+    "category": "Street",
+    "description": "Google road map tiles.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; Google"
+    }
+  },
+  {
+    "id": "google-satellite",
+    "name": "Google Satellite",
+    "provider": "google",
+    "category": "Imagery",
+    "description": "Google satellite tiles.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; Google"
+    }
+  },
+  {
+    "id": "google-terrain",
+    "name": "Google Terrain",
+    "provider": "google",
+    "category": "Terrain",
+    "description": "Google terrain tiles.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; Google"
+    }
+  },
+  {
+    "id": "google-hybrid",
+    "name": "Google Hybrid",
+    "provider": "google",
+    "category": "Imagery",
+    "description": "Google hybrid imagery tiles.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; Google"
+    }
+  },
+  {
+    "id": "cyclosm",
+    "name": "CyclOSM",
+    "provider": "cyclosm",
+    "category": "Cycling",
+    "description": "Cycling-focused OpenStreetMap style.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "CyclOSM | Map data: &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "esri-world-imagery",
+    "name": "World Imagery",
+    "provider": "esri",
+    "category": "Imagery",
+    "description": "Satellite and aerial imagery.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri, Maxar, Earthstar Geographics, and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-topo",
+    "name": "World Topographic",
+    "provider": "esri",
+    "category": "Terrain",
+    "description": "Reference topographic map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-street-map",
+    "name": "World Street Map",
+    "provider": "esri",
+    "category": "Street",
+    "description": "ESRI street reference basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-gray-canvas",
+    "name": "World Gray Canvas",
+    "provider": "esri",
+    "category": "Light",
+    "description": "Light gray canvas basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-dark-gray-canvas",
+    "name": "World Dark Gray Canvas",
+    "provider": "esri",
+    "category": "Dark",
+    "description": "Dark gray canvas basemap for high-contrast overlays.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-light-gray-reference",
+    "name": "World Light Gray Reference",
+    "provider": "esri",
+    "category": "Labels",
+    "description": "Boundary and place label overlay matching the Light Gray Canvas basemap.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-dark-gray-reference",
+    "name": "World Dark Gray Reference",
+    "provider": "esri",
+    "category": "Labels",
+    "description": "Boundary and place label overlay matching the Dark Gray Canvas basemap.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-natgeo-world-map",
+    "name": "NatGeo World Map",
+    "provider": "esri",
+    "category": "Street",
+    "description": "National Geographic style world map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-ocean-basemap",
+    "name": "Ocean Basemap",
+    "provider": "esri",
+    "category": "Marine",
+    "description": "Ocean reference basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-physical",
+    "name": "World Physical",
+    "provider": "esri",
+    "category": "Terrain",
+    "description": "Physical world map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 8,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-shaded-relief",
+    "name": "World Shaded Relief",
+    "provider": "esri",
+    "category": "Terrain",
+    "description": "Shaded relief world map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 10,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "esri-world-terrain",
+    "name": "World Terrain",
+    "provider": "esri",
+    "category": "Terrain",
+    "description": "ESRI terrain base.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 5,
+      "attribution": "Tiles &copy; Esri and the GIS User Community"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2018",
+    "name": "EOX Sentinel-2 cloudless 2018",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2018 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2018_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2018)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2019",
+    "name": "EOX Sentinel-2 cloudless 2019",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2019 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2019_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2019)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2020",
+    "name": "EOX Sentinel-2 cloudless 2020",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2020 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2020)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2021",
+    "name": "EOX Sentinel-2 cloudless 2021",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2021 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2021_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2021)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2022",
+    "name": "EOX Sentinel-2 cloudless 2022",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2022 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2022_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2022)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2023",
+    "name": "EOX Sentinel-2 cloudless 2023",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2023 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2023_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2023)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2024",
+    "name": "EOX Sentinel-2 cloudless 2024",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2024 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024)"
+    }
+  },
+  {
+    "id": "eox-s2cloudless-2025",
+    "name": "EOX Sentinel-2 cloudless 2025",
+    "provider": "eox",
+    "category": "Imagery",
+    "description": "Cloudless Sentinel-2 satellite mosaic for 2025 (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2025_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "Sentinel-2 cloudless <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2025)"
+    }
+  },
+  {
+    "id": "eox-terrain-light",
+    "name": "EOX Terrain Light",
+    "provider": "eox",
+    "category": "Terrain",
+    "description": "Light terrain basemap from EOX Maps (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.maps.eox.at/wmts/1.0.0/terrain-light_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg"],
+      "tileSize": 256,
+      "maxzoom": 14,
+      "attribution": "Terrain Light <a href=\"https://maps.eox.at\" target=\"_blank\" rel=\"noopener\">EOX</a> (Data &copy; OpenStreetMap contributors and others, Rendering &copy; EOX)"
+    }
+  },
+  {
+    "id": "eox-terrain",
+    "name": "EOX Terrain",
+    "provider": "eox",
+    "category": "Terrain",
+    "description": "Natural-like terrain basemap from EOX Maps (non-commercial use).",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.maps.eox.at/wmts/1.0.0/terrain_3857/default/g/{z}/{y}/{x}.jpg"],
+      "tileSize": 256,
+      "maxzoom": 14,
+      "attribution": "Terrain <a href=\"https://maps.eox.at\" target=\"_blank\" rel=\"noopener\">EOX</a> (Data &copy; OpenStreetMap contributors and others, Rendering &copy; EOX)"
+    }
+  },
+  {
+    "id": "eox-overlay",
+    "name": "EOX Overlay",
+    "provider": "eox",
+    "category": "Labels",
+    "description": "Transparent overlay with borders and points of interest from EOX Maps (non-commercial use).",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.maps.eox.at/wmts/1.0.0/overlay_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "maxzoom": 14,
+      "attribution": "Overlay <a href=\"https://maps.eox.at\" target=\"_blank\" rel=\"noopener\">EOX</a> (Data &copy; OpenStreetMap contributors and others, Rendering &copy; EOX)"
+    }
+  },
+  {
+    "id": "eox-overlay-bright",
+    "name": "EOX Overlay Bright",
+    "provider": "eox",
+    "category": "Labels",
+    "description": "Bright transparent overlay with borders and points of interest from EOX Maps (non-commercial use).",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.maps.eox.at/wmts/1.0.0/overlay_bright_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.png"
+      ],
+      "tileSize": 256,
+      "maxzoom": 14,
+      "attribution": "Overlay <a href=\"https://maps.eox.at\" target=\"_blank\" rel=\"noopener\">EOX</a> (Data &copy; OpenStreetMap contributors and others, Rendering &copy; EOX)"
+    }
+  },
+  {
+    "id": "nasa-gibs-blue-marble",
+    "name": "Blue Marble",
+    "provider": "nasa-gibs",
+    "category": "Imagery",
+    "description": "NASA Blue Marble Next Generation imagery.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_NextGeneration/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 8,
+      "attribution": "Imagery provided by NASA Global Imagery Browse Services"
+    }
+  },
+  {
+    "id": "nasa-gibs-aster-gdem-shaded-relief",
+    "name": "ASTER GDEM Shaded Relief",
+    "provider": "nasa-gibs",
+    "category": "Terrain",
+    "description": "NASA ASTER GDEM greyscale shaded relief.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/ASTER_GDEM_Greyscale_Shaded_Relief/default/GoogleMapsCompatible_Level12/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 12,
+      "attribution": "Imagery provided by NASA Global Imagery Browse Services"
+    }
+  },
+  {
+    "id": "nasa-gibs-modis-terra-true-color",
+    "name": "MODIS Terra True Color",
+    "provider": "nasa-gibs",
+    "category": "Imagery",
+    "description": "NASA MODIS Terra corrected reflectance true color.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/default/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 9,
+      "attribution": "Imagery provided by NASA Global Imagery Browse Services"
+    }
+  },
+  {
+    "id": "nasa-gibs-viirs-earth-at-night",
+    "name": "VIIRS Earth At Night 2012",
+    "provider": "nasa-gibs",
+    "category": "Imagery",
+    "description": "NASA VIIRS city lights imagery.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_CityLights_2012/default/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 8,
+      "attribution": "Imagery provided by NASA Global Imagery Browse Services"
+    }
+  },
+  {
+    "id": "openrailwaymap",
+    "name": "OpenRailwayMap",
+    "provider": "openrailwaymap",
+    "category": "Transport",
+    "description": "Railway infrastructure map.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: OpenRailwayMap"
+    }
+  },
+  {
+    "id": "openrailwaymap-maxspeed",
+    "name": "OpenRailwayMap Maxspeed",
+    "provider": "openrailwaymap",
+    "category": "Transport",
+    "description": "Railway line speed limits as a transparent overlay.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: OpenRailwayMap"
+    }
+  },
+  {
+    "id": "openrailwaymap-electrification",
+    "name": "OpenRailwayMap Electrification",
+    "provider": "openrailwaymap",
+    "category": "Transport",
+    "description": "Railway electrification systems and voltages as a transparent overlay.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tiles.openrailwaymap.org/electrification/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: OpenRailwayMap"
+    }
+  },
+  {
+    "id": "openrailwaymap-signals",
+    "name": "OpenRailwayMap Signals",
+    "provider": "openrailwaymap",
+    "category": "Transport",
+    "description": "Railway signalling infrastructure as a transparent overlay.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tiles.openrailwaymap.org/signals/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: OpenRailwayMap"
+    }
+  },
+  {
+    "id": "opentopomap",
+    "name": "OpenTopoMap",
+    "provider": "opentopomap",
+    "category": "Terrain",
+    "description": "Topographic map with relief and contour styling.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://a.tile.opentopomap.org/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 17,
+      "attribution": "Map data &copy; OpenStreetMap contributors, SRTM | Map style &copy; OpenTopoMap"
+    }
+  },
+  {
+    "id": "stadia-alidade-smooth",
+    "name": "Stadia Alidade Smooth",
+    "provider": "stadia",
+    "category": "Light",
+    "description": "Muted light basemap with few POIs, designed for overlays.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-alidade-smooth-dark",
+    "name": "Stadia Alidade Smooth Dark",
+    "provider": "stadia",
+    "category": "Dark",
+    "description": "Dark counterpart to Alidade Smooth for overlays.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-alidade-satellite",
+    "name": "Stadia Alidade Satellite",
+    "provider": "stadia",
+    "category": "Imagery",
+    "description": "Satellite imagery with Alidade labels and roads.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}.jpg"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-outdoors",
+    "name": "Stadia Outdoors",
+    "provider": "stadia",
+    "category": "Outdoor",
+    "description": "Outdoor basemap highlighting trails, parks, and ski slopes.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-osm-bright",
+    "name": "Stadia OSM Bright",
+    "provider": "stadia",
+    "category": "Street",
+    "description": "General-purpose OpenStreetMap street basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-toner",
+    "name": "Stamen Toner",
+    "provider": "stadia",
+    "category": "Dark",
+    "description": "High-contrast black and white Stamen basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-toner-lite",
+    "name": "Stamen Toner Lite",
+    "provider": "stadia",
+    "category": "Light",
+    "description": "Lighter, lower-contrast variant of Stamen Toner.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-toner-background",
+    "name": "Stamen Toner Background",
+    "provider": "stadia",
+    "category": "Dark",
+    "description": "Stamen Toner without labels, for use under your own data.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_toner_background/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-toner-labels",
+    "name": "Stamen Toner Labels",
+    "provider": "stadia",
+    "category": "Labels",
+    "description": "Stamen Toner label overlay.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-terrain",
+    "name": "Stamen Terrain",
+    "provider": "stadia",
+    "category": "Terrain",
+    "description": "Stamen terrain basemap with hill shading and vegetation.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-terrain-background",
+    "name": "Stamen Terrain Background",
+    "provider": "stadia",
+    "category": "Terrain",
+    "description": "Stamen Terrain without labels or roads.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_terrain_background/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-terrain-labels",
+    "name": "Stamen Terrain Labels",
+    "provider": "stadia",
+    "category": "Labels",
+    "description": "Stamen Terrain label overlay.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_terrain_labels/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 20,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "stadia-stamen-watercolor",
+    "name": "Stamen Watercolor",
+    "provider": "stadia",
+    "category": "Artistic",
+    "description": "Hand-painted watercolor basemap from Stamen Design.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"],
+      "tileSize": 256,
+      "maxzoom": 16,
+      "attribution": "&copy; <a href=\"https://stadiamaps.com/\" target=\"_blank\" rel=\"noopener\">Stadia Maps</a> &copy; <a href=\"https://stamen.com/\" target=\"_blank\" rel=\"noopener\">Stamen Design</a> &copy; <a href=\"https://openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> &copy; OpenStreetMap contributors"
+    }
+  },
+  {
+    "id": "swisstopo-national-map-color",
+    "name": "Swiss National Map Color",
+    "provider": "swisstopo",
+    "category": "Regional",
+    "description": "Swiss federal color national map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/3857/{z}/{x}/{y}.jpeg"],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "&copy; swisstopo"
+    }
+  },
+  {
+    "id": "swisstopo-national-map-grey",
+    "name": "Swiss National Map Grey",
+    "provider": "swisstopo",
+    "category": "Regional",
+    "description": "Swiss federal grey national map.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-grau/default/current/3857/{z}/{x}/{y}.jpeg"],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "&copy; swisstopo"
+    }
+  },
+  {
+    "id": "swisstopo-swissimage",
+    "name": "SWISSIMAGE",
+    "provider": "swisstopo",
+    "category": "Imagery",
+    "description": "Swiss federal aerial imagery.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg"],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "&copy; swisstopo"
+    }
+  },
+  {
+    "id": "amap-street",
+    "name": "Amap Street",
+    "provider": "amap",
+    "category": "Regional",
+    "description": "Amap street map of China, reachable from mainland China. Tiles are in the GCJ-02 datum, so WGS84 data overlaid on them appears offset by roughly 100-700 m.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=1&style=7&x={x}&y={y}&z={z}",
+        "https://wprd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=1&style=7&x={x}&y={y}&z={z}",
+        "https://wprd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=1&style=7&x={x}&y={y}&z={z}",
+        "https://wprd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=1&style=7&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "&copy; <a href=\"https://www.amap.com\" target=\"_blank\" rel=\"noopener\">高德地图 Amap</a>"
+    }
+  },
+  {
+    "id": "amap-satellite",
+    "name": "Amap Satellite",
+    "provider": "amap",
+    "category": "Imagery",
+    "description": "Amap satellite imagery, reachable from mainland China. Pair with Amap Labels. Tiles are in the GCJ-02 datum, so WGS84 data overlaid on them appears offset by roughly 100-700 m.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+        "https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+        "https://webst03.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+        "https://webst04.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "&copy; <a href=\"https://www.amap.com\" target=\"_blank\" rel=\"noopener\">高德地图 Amap</a>"
+    }
+  },
+  {
+    "id": "amap-labels",
+    "name": "Amap Labels",
+    "provider": "amap",
+    "category": "Labels",
+    "description": "Transparent Amap road and label overlay, for use over Amap Satellite. Tiles are in the GCJ-02 datum, so WGS84 data overlaid on them appears offset by roughly 100-700 m.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://webst01.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}",
+        "https://webst02.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}",
+        "https://webst03.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}",
+        "https://webst04.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}"
+      ],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "&copy; <a href=\"https://www.amap.com\" target=\"_blank\" rel=\"noopener\">高德地图 Amap</a>"
+    }
+  },
+  {
+    "id": "tencent-street",
+    "name": "Tencent Street",
+    "provider": "tencent",
+    "category": "Regional",
+    "description": "Tencent street map of China, reachable from mainland China. Tiles are in the GCJ-02 datum, so WGS84 data overlaid on them appears offset by roughly 100-700 m.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://rt0.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=1&scene=0",
+        "https://rt1.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=1&scene=0",
+        "https://rt2.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=1&scene=0",
+        "https://rt3.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=1&scene=0"
+      ],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "scheme": "tms",
+      "attribution": "&copy; <a href=\"https://map.qq.com\" target=\"_blank\" rel=\"noopener\">腾讯地图 Tencent Maps</a>"
+    }
+  },
+  {
+    "id": "tencent-dark",
+    "name": "Tencent Dark",
+    "provider": "tencent",
+    "category": "Dark",
+    "description": "Dark Tencent street map for high-contrast overlays, reachable from mainland China. Tiles are in the GCJ-02 datum, so WGS84 data overlaid on them appears offset by roughly 100-700 m.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://rt0.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=4&scene=0",
+        "https://rt1.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=4&scene=0",
+        "https://rt2.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=4&scene=0",
+        "https://rt3.map.gtimg.com/tile?z={z}&x={x}&y={y}&styleid=4&scene=0"
+      ],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "scheme": "tms",
+      "attribution": "&copy; <a href=\"https://map.qq.com\" target=\"_blank\" rel=\"noopener\">腾讯地图 Tencent Maps</a>"
+    }
+  },
+  {
+    "id": "topplusopen-color",
+    "name": "TopPlusOpen Color",
+    "provider": "topplusopen",
+    "category": "Regional",
+    "description": "German TopPlusOpen color basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "Map data: &copy; dl-de/by-2-0"
+    }
+  },
+  {
+    "id": "topplusopen-grey",
+    "name": "TopPlusOpen Grey",
+    "provider": "topplusopen",
+    "category": "Regional",
+    "description": "German TopPlusOpen grey basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": [
+        "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png"
+      ],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "Map data: &copy; dl-de/by-2-0"
+    }
+  },
+  {
+    "id": "usgs-us-imagery",
+    "name": "USGS US Imagery",
+    "provider": "usgs",
+    "category": "Imagery",
+    "description": "USGS imagery-only basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles courtesy of the U.S. Geological Survey"
+    }
+  },
+  {
+    "id": "usgs-us-imagery-topo",
+    "name": "USGS US Imagery Topo",
+    "provider": "usgs",
+    "category": "Imagery",
+    "description": "USGS imagery with topographic reference.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles courtesy of the U.S. Geological Survey"
+    }
+  },
+  {
+    "id": "usgs-us-topo",
+    "name": "USGS US Topo",
+    "provider": "usgs",
+    "category": "Terrain",
+    "description": "USGS topographic basemap.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles courtesy of the U.S. Geological Survey"
+    }
+  },
+  {
+    "id": "usgs-us-hydro",
+    "name": "USGS US Hydrography",
+    "provider": "usgs",
+    "category": "Labels",
+    "description": "USGS National Hydrography reference overlay of rivers, streams, and waterbodies.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://basemap.nationalmap.gov/arcgis/rest/services/USGSHydroCached/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles courtesy of the U.S. Geological Survey"
+    }
+  },
+  {
+    "id": "usgs-us-shaded-relief",
+    "name": "USGS US Shaded Relief",
+    "provider": "usgs",
+    "category": "Terrain",
+    "description": "USGS shaded relief basemap without other reference content.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Tiles courtesy of the U.S. Geological Survey"
+    }
+  },
+  {
+    "id": "waymarkedtrails-hiking",
+    "name": "Waymarked Trails Hiking",
+    "provider": "waymarkedtrails",
+    "category": "Outdoor",
+    "description": "Hiking routes from Waymarked Trails.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: Waymarked Trails"
+    }
+  },
+  {
+    "id": "waymarkedtrails-cycling",
+    "name": "Waymarked Trails Cycling",
+    "provider": "waymarkedtrails",
+    "category": "Cycling",
+    "description": "Cycling routes from Waymarked Trails.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: Waymarked Trails"
+    }
+  },
+  {
+    "id": "waymarkedtrails-mtb",
+    "name": "Waymarked Trails MTB",
+    "provider": "waymarkedtrails",
+    "category": "Cycling",
+    "description": "Mountain biking routes from Waymarked Trails.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: Waymarked Trails"
+    }
+  },
+  {
+    "id": "waymarkedtrails-slopes",
+    "name": "Waymarked Trails Slopes",
+    "provider": "waymarkedtrails",
+    "category": "Outdoor",
+    "description": "Slope routes from Waymarked Trails.",
+    "role": "overlay",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://tile.waymarkedtrails.org/slopes/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "maxzoom": 19,
+      "attribution": "Map data: &copy; OpenStreetMap contributors | Map style: Waymarked Trails"
+    }
+  },
+  {
+    "id": "openbasiskaart",
+    "name": "Openbasiskaart",
+    "provider": "openbasiskaart",
+    "category": "Regional",
+    "description": "Netherlands topographic background map based on OpenStreetMap data.",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://www.openbasiskaart.nl/mapcache/wmts/1.0.0/osm-g/default/g/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "attribution": "Map data &copy; OpenStreetMap contributors | Openbasiskaart"
+    }
+  },
+  {
+    "id": "openfreemap-positron",
+    "name": "OpenFreeMap Positron",
+    "provider": "openfreemap",
+    "category": "Light",
+    "description": "Light, minimal OpenFreeMap vector style for data overlays.",
+    "role": "base",
+    "styleUrl": "https://tiles.openfreemap.org/styles/positron"
+  },
+  {
+    "id": "openfreemap-bright",
+    "name": "OpenFreeMap Bright",
+    "provider": "openfreemap",
+    "category": "Street",
+    "description": "Colorful OpenFreeMap vector street style.",
+    "role": "base",
+    "styleUrl": "https://tiles.openfreemap.org/styles/bright"
+  },
+  {
+    "id": "openfreemap-liberty",
+    "name": "OpenFreeMap Liberty",
+    "provider": "openfreemap",
+    "category": "Vector",
+    "description": "Open vector style loaded as a full MapLibre style.",
+    "role": "base",
+    "styleUrl": "https://tiles.openfreemap.org/styles/liberty"
+  },
+  {
+    "id": "openfreemap-dark",
+    "name": "OpenFreeMap Dark",
+    "provider": "openfreemap",
+    "category": "Dark",
+    "description": "Dark OpenFreeMap vector style.",
+    "role": "base",
+    "styleUrl": "https://tiles.openfreemap.org/styles/dark"
+  },
+  {
+    "id": "openfreemap-fiord",
+    "name": "OpenFreeMap Fiord",
+    "provider": "openfreemap",
+    "category": "Dark",
+    "description": "Blue-toned dark OpenFreeMap vector style.",
+    "role": "base",
+    "styleUrl": "https://tiles.openfreemap.org/styles/fiord"
+  },
+  {
+    "id": "openfreemap-3d",
+    "name": "OpenFreeMap 3D",
+    "provider": "openfreemap",
+    "category": "3D",
+    "description": "OpenFreeMap Liberty style with a pitched 3D camera view.",
+    "role": "base",
+    "styleUrl": "https://tiles.openfreemap.org/styles/liberty"
+  },
+  {
+    "id": "maptoolkit-summer",
+    "name": "Maptoolkit Summer",
+    "provider": "maptoolkit",
+    "category": "Outdoor",
+    "description": "Maptoolkit outdoor summer style with hillshading and terrain detail.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/summer.json"
+  },
+  {
+    "id": "maptoolkit-light",
+    "name": "Maptoolkit Light",
+    "provider": "maptoolkit",
+    "category": "Light",
+    "description": "Light Maptoolkit style for data overlays.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/light.json"
+  },
+  {
+    "id": "maptoolkit-hiking",
+    "name": "Maptoolkit Hiking",
+    "provider": "maptoolkit",
+    "category": "Outdoor",
+    "description": "Maptoolkit hiking style with trails, rock drawing, and terrain.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/hiking.json"
+  },
+  {
+    "id": "maptoolkit-cycling",
+    "name": "Maptoolkit Cycling",
+    "provider": "maptoolkit",
+    "category": "Cycling",
+    "description": "Maptoolkit cycling style with bike routes and terrain.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/cycling.json"
+  },
+  {
+    "id": "maptoolkit-winter",
+    "name": "Maptoolkit Winter",
+    "provider": "maptoolkit",
+    "category": "Outdoor",
+    "description": "Maptoolkit winter sports style with slopes and mountain terrain.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/winter.json"
+  },
+  {
+    "id": "maptoolkit-dark",
+    "name": "Maptoolkit Dark",
+    "provider": "maptoolkit",
+    "category": "Dark",
+    "description": "Dark Maptoolkit style for high-contrast overlays.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/dark.json"
+  },
+  {
+    "id": "maptoolkit-street",
+    "name": "Maptoolkit Street",
+    "provider": "maptoolkit",
+    "category": "Street",
+    "description": "Maptoolkit general-purpose street style.",
+    "role": "base",
+    "styleUrl": "https://styles.maptoolkit.org/street.json"
+  },
+  {
+    "id": "kartverket-topo",
+    "name": "Norgeskart Topo",
+    "provider": "kartverket",
+    "category": "Topographic",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cache.kartverket.no/v1/wmts/1.0.0/topo/default/webmercator/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 18,
+      "attribution": "&copy; <a href=\"https://www.kartverket.no/\" target=\"_blank\" rel=\"noopener\">Kartverket</a>"
+    }
+  },
+  {
+    "id": "kartverket-topograatone",
+    "name": "Norgeskart Topo (grayscale)",
+    "provider": "kartverket",
+    "category": "Topographic",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cache.kartverket.no/v1/wmts/1.0.0/topograatone/default/webmercator/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 18,
+      "attribution": "&copy; <a href=\"https://www.kartverket.no/\" target=\"_blank\" rel=\"noopener\">Kartverket</a>"
+    }
+  },
+  {
+    "id": "kartverket-toporaster",
+    "name": "Norgeskart Topo (raster)",
+    "provider": "kartverket",
+    "category": "Topographic",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cache.kartverket.no/v1/wmts/1.0.0/toporaster/default/webmercator/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 18,
+      "attribution": "&copy; <a href=\"https://www.kartverket.no/\" target=\"_blank\" rel=\"noopener\">Kartverket</a>"
+    }
+  },
+  {
+    "id": "kartverket-sjokartraster",
+    "name": "Norgeskart Nautical Raster",
+    "provider": "kartverket",
+    "category": "Nautical",
+    "role": "base",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cache.kartverket.no/v1/wmts/1.0.0/sjokartraster/default/webmercator/{z}/{y}/{x}.png"],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 18,
+      "attribution": "&copy; <a href=\"https://www.kartverket.no/\" target=\"_blank\" rel=\"noopener\">Kartverket</a>"
+    }
+  },
+  {
+    "id": "kartverket-nautical-vector",
+    "name": "Norgeskart Nautical Vector",
+    "provider": "kartverket",
+    "category": "Nautical",
+    "role": "base",
+    "styleUrl": "https://www.norgeskart.no/api/styles/nautisk-bakgrunnskart.json"
+  },
+  {
+    "id": "openfreemap-3d-buildings",
+    "name": "3D-bygninger",
+    "provider": "openfreemap",
+    "category": "3D",
+    "description": "Bygninger i 3D fra OpenStreetMap (OpenFreeMap). Fungerer oppå alle bakgrunnskart fra zoom 14.",
+    "role": "overlay",
+    "source": {
+      "type": "vector",
+      "url": "https://tiles.openfreemap.org/planet",
+      "attribution": "OpenFreeMap &copy; OpenMapTiles Data from OpenStreetMap"
+    },
+    "layer": {
+      "type": "fill-extrusion",
+      "source-layer": "building",
+      "minzoom": 14,
+      "paint": {
+        "fill-extrusion-base": ["get", "render_min_height"],
+        "fill-extrusion-height": ["get", "render_height"],
+        "fill-extrusion-color": [
+          "interpolate",
+          ["linear"],
+          ["get", "render_height"],
+          0,
+          "#e4ddd0",
+          30,
+          "#cfc6b6",
+          100,
+          "#b3a996"
+        ],
+        "fill-extrusion-opacity": 0.9
+      }
+    }
+  }
+]
